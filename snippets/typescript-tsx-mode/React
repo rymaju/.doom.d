@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: React
+# key: React
+# --
+import React from 'react';
+
+const ${0:enumerate}: React.FC = () => {
+  return (<></>)
+};
+
+export default $0;
