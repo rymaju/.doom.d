@@ -51,3 +51,4 @@
 
 ;; Jest test runner to test individual files
 (package! jest)
+(package! pollen-mode)

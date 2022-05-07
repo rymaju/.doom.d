@@ -95,3 +95,22 @@
 
 (after! magit
   (add-hook 'git-commit-setup-hook 'insert-emoji-conventional-commit-type))
+
+;; Use the "command" key as meta (M-) on Mac
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
+(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'medium))
+
+;; To get Java code completion to work in meghanada mode without the disable/enable hack
+;; https://github.com/lollerz/doom-emacs/commit/ea3b0a0d3a160061e2ee9e2bfc83422d13220ddf
+(set-company-backend! 'java-mode '(company-meghanada :separate company-dabbrev-code))
+
+(defun prettier-format-current-file ()
+  "Formats the current file using prettier (must be installed globally)"
+  (interactive)
+  (shell-command (format "prettier --write %s" (shell-quote-argument (buffer-file-name)))))
+
+(setq global-prettify-symbols-mode 'nil)
