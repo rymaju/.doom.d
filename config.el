@@ -102,7 +102,10 @@
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
-(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'medium))
+(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'regular))
+
+;; Whenever you open emacs, the window is maximized to screen width & height
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;; To get Java code completion to work in meghanada mode without the disable/enable hack
 ;; https://github.com/lollerz/doom-emacs/commit/ea3b0a0d3a160061e2ee9e2bfc83422d13220ddf
