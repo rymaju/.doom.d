@@ -102,7 +102,8 @@
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
-(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'regular))
+(setq doom-font (font-spec :family "Fira Code" :size 16)
+      doom-variable-pitch-font (font-spec :family "Fira Sans"))
 
 ;; Whenever you open emacs, the window is maximized to screen width & height
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
